@@ -35,7 +35,7 @@ RUN apk add --no-cache $PACKAGES \
   && sed -i -e "s/bin\/sh/bin\/bash/" /etc/passwd
 
 RUN echo "[ ! -z \"\$TERM\" -a -r /etc/motd ] && cat /etc/motd" >> /etc/bash/bashrc
-
+#hb
 WORKDIR ${WORKDIR}
 
 COPY --from=builder /greenfield/build/bin/gnfd ${WORKDIR}/
